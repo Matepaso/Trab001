@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Trab001.props" />
+</Project>
