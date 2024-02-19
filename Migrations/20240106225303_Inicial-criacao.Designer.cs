@@ -11,7 +11,7 @@ using Trab001.Models;
 namespace Trab001.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20231026130318_Inicial-criacao")]
+    [Migration("20240106225303_Inicial-criacao")]
     partial class Inicialcriacao
     {
         /// <inheritdoc />
@@ -19,7 +19,7 @@ namespace Trab001.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.12")
+                .HasAnnotation("ProductVersion", "7.0.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);

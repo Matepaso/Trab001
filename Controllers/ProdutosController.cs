@@ -62,7 +62,6 @@ namespace Trab001.Controllers
                 _context.Add(produtos);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-
             }
             return View(produtos);
         }

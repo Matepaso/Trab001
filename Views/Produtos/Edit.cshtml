@@ -14,25 +14,25 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label for="exampleInputNomeEdit" asp-for="Nome" class="form-label">Nome</label>
-                <input type="text" asp-for="Nome" class="form-control" id="exampleInputNomeEdit" aria-describedby="NomeEdit">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="exampleInputValorEdit" asp-for="Valor" class="form-label">Valor</label>
-                <input type="text" asp-for="Valor" class="form-control" id="exampleInputValorEdit" aria-describedby="ValorEdit">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
-            <br />
             <div class="form-group">
-                <a role="button" class="btn btn-primary" asp-action="Index">Voltar</a>
-                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

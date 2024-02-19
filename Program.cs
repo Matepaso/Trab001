@@ -1,4 +1,4 @@
-using Humanizer;
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,7 +14,7 @@ ci.NumberFormat.CurrencyDecimalSeparator = ".";
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<Contexto>(options => options.UseSqlServer("Data Source = DESKTOP-126PQJ2\\MSSQLMATEPASO; Initial Catalog = bd_loja; User = sa; Password = p@gnossim1542004; TrustServerCertificate = True;"));
 builder.Services.AddDbContext<ContextoUsuario>(options => options.UseSqlServer("Data Source = DESKTOP-126PQJ2\\MSSQLMATEPASO; Initial Catalog = bd_loja; User = sa; Password = p@gnossim1542004; TrustServerCertificate = True;"));
 
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
